@@ -1,13 +1,15 @@
 # GTFSRT-Best-Practices
 
-Best Practices for Structuring GTFS Realtime Data
+Best Practices for Structuring GTFS Realtime Data. The main document can be found in the [index.md file](./index.md).
 
 # Editing GTFSRT Best Practices
 
-The Best Practices data are written in Markdown and is organized by Message and by use case.
+This document is written in Markdown and is organized by Message and by use case.
 
 * `field_name`: The name of the GTFSRT field being described
 * `recommendations`: An array of the recommendations provided for each field_name
+
+The parts that constructed the [index.md file](./index.md) can be found in the `en/` directory. To reconstruct the [index.md file](./index.md) from these part, run `./en/combine.sh` from the main directory.
 
 # License
 
