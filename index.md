@@ -20,7 +20,7 @@ Recommended practices are organized into two primary sections
 | gtfs_realtime_version | Current version is "2.0". Valid versions are "2.0" and "1.0" (with the `string` data type). For example, `gtfs_realtime_version:2.0` and `gtfs_realtime_version:2` are both not valid. `gtfs_realtime_version:"2.0"` is valid. |
 | incrementality | |
 | timestamp | This timestamp must be greater than all timestamps for individual entities ([TripUpdate](#TripUpdate) and [VehiclePosition](#VehiclePosition)), and should not decrease between two sequential iterations. |
-|  | The GTFS-rt header `timestamp` value should always change if the feed contents change - the feed contents must not change without updating the header `timestamp`.<br>*Common mistakes* - If there are multiple instances of GTFS-realtime feed behind a load balancer, each instance may be pulling information from the real-time data source and publishing it to consumers slightly out of sync. If a GTFS-rt consumer makes two back-to-back requests, and each request is served by a different GTFS-rt feed instance, the same feed contents could potentially be returned to the consumer with different timestamps.<br>*Possible solution* - Configure the load balancer for "sticky routes", so that the consumer always receives the GTFS-rt feed contents from the same GTFS-rt instance. |
+|  | The GTFS-Realtime header `timestamp` value should always change if the feed contents change - the feed contents must not change without updating the header `timestamp`.<br>*Common mistakes* - If there are multiple instances of GTFS-Realtime feed behind a load balancer, each instance may be pulling information from the real-time data source and publishing it to consumers slightly out of sync. If a GTFS-Realtime consumer makes two back-to-back requests, and each request is served by a different GTFS-Realtime feed instance, the same feed contents could potentially be returned to the consumer with different timestamps.<br>*Possible solution* - Configure the load balancer for "sticky routes", so that the consumer always receives the GTFS-Realtime feed contents from the same GTFS-Realtime instance. |
 ### FeedEntity
 
 | Field Name | Recommendation |
@@ -40,7 +40,7 @@ Recommended practices are organized into two primary sections
 |  | If separate `VehiclePosition` and `TripUpdate` feeds are provided, [TripDescriptor](#TripDescriptor) and [VehicleDescriptor](#VehicleDescriptor) ID values pairing should match between the two feeds.<br/>For example, a `VehiclePosition` entity has `vehicle_id:A` and `trip_id:4`, then the corresponding `TripUpdate` entity should also have `vehicle_id:A` and `trip_id:4`. If any `TripUpdate` entity has `trip_id:4` and any `vehicle_id` other than 4, this is an error. |
 | stop_time_update | `stop_time_updates` for a given `trip_id` should be strictly ordered by increasing `stop_sequence` and no `stop_sequence` should be repeated. While sorting `stop_sequence` is not strictly required by the specification, it is a good practice. |
 | timestamp |  |
-| delay | delay should be propagated within a trip and across trips in the same block. When propagating delay, any layover should be considered and subtracted from the delay time. For example, a vehicle is running on a block that consists of two trips, one with `trip_id`: "trip_A" and one with `trip_id`: "trip_B", and 10 minutes layover between the two trips. When the vehicle is running 20 minutes late on "trip_A", trip_update.delay on "trip_A" should be 1200 (20 minutes = 1200 seconds), and on "trip_B" should should be 600 (10 minutes). |
+| delay | `TripUpdate.delay` should be propagated across trips in the same block. When propagating `TripUpdate.delay`, any layover should be considered and subtracted from the delay time. For example, a vehicle is running on a block that consists of two trips, one with `trip_id`: "trip_A" and one with `trip_id`: "trip_B", and 10 minutes layover between the two trips. When the vehicle is running 20 minutes late on "trip_A", trip_update.delay on "trip_A" should be 1200 (20 minutes = 1200 seconds), and on "trip_B" should should be 600 (10 minutes). |
 |  | `TripUpdate.delay` should represent schedule deviation, i.e., the observed past value for how ahead/behind schedule the vehicle is. Predictions for future stops should be provided through `StopTimeEvent.delay` |
 ### StopTimeUpdate
 
@@ -122,7 +122,7 @@ Recommended practices are organized into two primary sections
 
 ### Frequency-based trips
 
-A frequency-based trip does not follow a fixed schedule but attempt to maintain predetermined headways. These trips are denoted in [GTFS frequency.txt](https://gtfs.org/reference/static/#frequenciestxt) by setting `exact_times=0`. There are several best practices to keep in mind when constructing GTFS-Realtime feeds for frequency-based trips.
+A frequency-based trip does not follow a fixed schedule but attempts to maintain predetermined headways. These trips are denoted in [GTFS frequency.txt](https://gtfs.org/reference/static/#frequenciestxt) by setting `exact_times=0`. There are several best practices to keep in mind when constructing GTFS-Realtime feeds for frequency-based trips.
 
 In [TripUpdate.StopTimeUpdate](#StopTimeUpdate), the [StopTimeEvent](#StopTimeEvent) for `arrival` and `departure` should not contain `delay` because frequency-based trips do not follow a fixed schedule. Instead, `time` should be provided to indicate arrival/departure predictions.
 
@@ -136,14 +136,14 @@ Frequency-based  trips' [TripUpdate](#TripUpdate) should contain `vehicle_id`. T
 
 ### Objectives
 
-The objectives of maintaining GTFS-Realtime Best Practices is to:
+The objectives of maintaining GTFS-Realtime Best Practices are to:
 
 * Improve end-user customer experience in public transportation apps
 * Make it easier for software developers to deploy and scale applications, products, and services
 
 ### How to propose or amend published GTFS-Realtime Best Practices
 
-GTFS applications and practice evolve, and so this document may need to be amended from time to time. To propose an amendment to this document, open a pull request [in the GTFS-Realtime Best Practices GitHub repository](https://github.com/MobilityData/GTFSRT-Best-Practices) and advocate for the change.
+GTFS applications and practices evolve, and so this document may need to be amended from time to time. To propose an amendment to this document, open a pull request [in the GTFS-Realtime Best Practices GitHub repository](https://github.com/MobilityData/GTFSRT-Best-Practices) and advocate for the change.
 
 ### Linking to This Document
 
