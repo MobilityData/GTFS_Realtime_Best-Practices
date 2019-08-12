@@ -1,14 +1,14 @@
-# GTFS-Realtime Data Best Practices
+# GTFS-realtime Data Best Practices
 
 ## Introduction
 
-These are recommended practices for describing real-time public transportation information in the [GTFS Realtime](https://gtfs.org/reference/realtime/v2/) data format.
+These are recommended practices for describing real-time public transportation information in the [GTFS-realtime](https://gtfs.org/reference/realtime/v2/) data format.
 
 ### Document Structure
 
 Recommended practices are organized into two primary sections
 
-* __[Practice Recommendations Organized by message](#practice-recommendations-organized-by-message):__ Recommendations are organized by message and field in the same order described in the official GTFS-Realtime reference.
+* __[Practice Recommendations Organized by message](#practice-recommendations-organized-by-message):__ Recommendations are organized by message and field in the same order described in the official GTFS-realtime reference.
 * __[Practice Recommendations Organized by Case](#practice-recommendations-organized-by-case):__ With particular cases, such as frequency-based service, practices may need to be applied across several messages and fields and even with the corresponding GTFS package. Such recommendations are consolidated in this section.
 
 ## Practice Recommendations Organized by Message
@@ -20,7 +20,7 @@ Recommended practices are organized into two primary sections
 | gtfs_realtime_version | Current version is "2.0". Valid versions are "2.0" and "1.0" (with the `string` data type). For example, `gtfs_realtime_version:2.0` and `gtfs_realtime_version:2` are both not valid. `gtfs_realtime_version:"2.0"` is valid. |
 | incrementality | |
 | timestamp | This timestamp must be greater than all timestamps for individual entities ([TripUpdate](#TripUpdate) and [VehiclePosition](#VehiclePosition)), and should not decrease between two sequential iterations. |
-|  | The GTFS-Realtime header `timestamp` value should always change if the feed contents change - the feed contents must not change without updating the header `timestamp`.<br>*Common mistakes* - If there are multiple instances of GTFS-Realtime feed behind a load balancer, each instance may be pulling information from the real-time data source and publishing it to consumers slightly out of sync. If a GTFS-Realtime consumer makes two back-to-back requests, and each request is served by a different GTFS-Realtime feed instance, the same feed contents could potentially be returned to the consumer with different timestamps.<br>*Possible solution* - Configure the load balancer for "sticky routes", so that the consumer always receives the GTFS-Realtime feed contents from the same GTFS-Realtime instance. |
+|  | The GTFS-realtime header `timestamp` value should always change if the feed contents change - the feed contents must not change without updating the header `timestamp`.<br>*Common mistakes* - If there are multiple instances of GTFS-realtime feed behind a load balancer, each instance may be pulling information from the real-time data source and publishing it to consumers slightly out of sync. If a GTFS-realtime consumer makes two back-to-back requests, and each request is served by a different GTFS-realtime feed instance, the same feed contents could potentially be returned to the consumer with different timestamps.<br>*Possible solution* - Configure the load balancer for "sticky routes", so that the consumer always receives the GTFS-realtime feed contents from the same GTFS-realtime instance. |
 ### FeedEntity
 
 | Field Name | Recommendation |
@@ -122,7 +122,7 @@ Recommended practices are organized into two primary sections
 
 ### Frequency-based trips
 
-A frequency-based trip does not follow a fixed schedule but attempts to maintain predetermined headways. These trips are denoted in [GTFS frequency.txt](https://gtfs.org/reference/static/#frequenciestxt) by setting `exact_times=0`. There are several best practices to keep in mind when constructing GTFS-Realtime feeds for frequency-based trips.
+A frequency-based trip does not follow a fixed schedule but attempts to maintain predetermined headways. These trips are denoted in [GTFS frequency.txt](https://gtfs.org/reference/static/#frequenciestxt) by setting `exact_times=0`. There are several best practices to keep in mind when constructing GTFS-realtime feeds for frequency-based trips.
 
 In [TripUpdate.StopTimeUpdate](#StopTimeUpdate), the [StopTimeEvent](#StopTimeEvent) for `arrival` and `departure` should not contain `delay` because frequency-based trips do not follow a fixed schedule. Instead, `time` should be provided to indicate arrival/departure predictions.
 
@@ -136,24 +136,24 @@ Frequency-based  trips' [TripUpdate](#TripUpdate) should contain `vehicle_id`. T
 
 ### Objectives
 
-The objectives of maintaining GTFS-Realtime Best Practices are to:
+The objectives of maintaining GTFS-realtime Best Practices are to:
 
 * Improve end-user customer experience in public transportation apps
 * Make it easier for software developers to deploy and scale applications, products, and services
 
-### How to propose or amend published GTFS-Realtime Best Practices
+### How to propose or amend published GTFS-realtime Best Practices
 
-GTFS applications and practices evolve, and so this document may need to be amended from time to time. To propose an amendment to this document, open a pull request [in the GTFS-Realtime Best Practices GitHub repository](https://github.com/MobilityData/GTFSRT-Best-Practices) and advocate for the change.
+GTFS applications and practices evolve, and so this document may need to be amended from time to time. To propose an amendment to this document, open a pull request [in the GTFS-realtime Best Practices GitHub repository](https://github.com/MobilityData/GTFSRT-Best-Practices) and advocate for the change.
 
 ### Linking to This Document
 
-Please link here in order to provide feed producers with guidance for correct formation of GTFS-Realtime data. Each individual recommendation has an anchor link. Click the recommendation to get the URL for the in-page anchor link.
+Please link here in order to provide feed producers with guidance for correct formation of GTFS-realtime data. Each individual recommendation has an anchor link. Click the recommendation to get the URL for the in-page anchor link.
 
-If a GTFS-Realtime-consuming application makes requirements or recommendations for GTFS-Realtime data practices that are not described here, it is recommended to publish a document with those requirements or recommendations to supplement these common best practices.
+If a GTFS-realtime-consuming application makes requirements or recommendations for GTFS-realtime data practices that are not described here, it is recommended to publish a document with those requirements or recommendations to supplement these common best practices.
 
-## GTFS-Realtime Best Practices Working Group
+## GTFS-realtime Best Practices Working Group
 
-The GTFS-Realtime Best Practices Working Group consists of public transportation providers, developers of  applications, consultants, and academic organizations to define common practices and expectations for GTFS-Realtime data. The goals of this working group are to support greater interoperability of data. To join the working group, email [gtfs@rmi.org](mailto:gtfs@rmi.org).
+The GTFS-realtime Best Practices Working Group consists of public transportation providers, developers of  applications, consultants, and academic organizations to define common practices and expectations for GTFS-realtime data. The goals of this working group are to support greater interoperability of data. To join the working group, email [gtfs@rmi.org](mailto:gtfs@rmi.org).
 
 Members of this working group include:
 
