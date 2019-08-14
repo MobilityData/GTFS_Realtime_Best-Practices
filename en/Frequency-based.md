@@ -1,4 +1,4 @@
-## Practice Recommendations Organized by Case
+## Practice Recommendations Organized by Use Case
 
 ### Frequency-based trips
 
