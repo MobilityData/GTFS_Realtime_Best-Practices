@@ -2,7 +2,7 @@
 
 ## Introduction
 
-These are recommended practices for describing real-time public transportation information in the [GTFS-realtime](https://gtfs.org/reference/realtime/v2/) data format.
+These are recommended practices for describing realtime public transportation information in the [GTFS-realtime](https://gtfs.org/reference/realtime/v2/) data format.
 
 ### Document Structure
 

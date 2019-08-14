@@ -2,7 +2,7 @@
 
 ## Introduction
 
-These are recommended practices for describing real-time public transportation information in the [GTFS-realtime](https://gtfs.org/reference/realtime/v2/) data format.
+These are recommended practices for describing realtime public transportation information in the [GTFS-realtime](https://gtfs.org/reference/realtime/v2/) data format.
 
 ### Document Structure
 
@@ -20,7 +20,7 @@ Recommended practices are organized into two primary sections
 | gtfs_realtime_version | Current version is "2.0". Valid versions are "2.0" and "1.0" (with the `string` data type). For example, `gtfs_realtime_version:2.0` and `gtfs_realtime_version:2` are both not valid. `gtfs_realtime_version:"2.0"` is valid. |
 | incrementality | |
 | timestamp | This timestamp must be greater than all timestamps for individual entities ([TripUpdate](#TripUpdate) and [VehiclePosition](#VehiclePosition)), and should not decrease between two sequential iterations. |
-|  | The GTFS-realtime header `timestamp` value should always change if the feed contents change - the feed contents must not change without updating the header `timestamp`.<br>*Common mistakes* - If there are multiple instances of GTFS-realtime feed behind a load balancer, each instance may be pulling information from the real-time data source and publishing it to consumers slightly out of sync. If a GTFS-realtime consumer makes two back-to-back requests, and each request is served by a different GTFS-realtime feed instance, the same feed contents could potentially be returned to the consumer with different timestamps.<br>*Possible solution* - Configure the load balancer for "sticky routes", so that the consumer always receives the GTFS-realtime feed contents from the same GTFS-realtime instance. |
+|  | The GTFS-realtime header `timestamp` value should always change if the feed contents change - the feed contents must not change without updating the header `timestamp`.<br>*Common mistakes* - If there are multiple instances of GTFS-realtime feed behind a load balancer, each instance may be pulling information from the realtime data source and publishing it to consumers slightly out of sync. If a GTFS-realtime consumer makes two back-to-back requests, and each request is served by a different GTFS-realtime feed instance, the same feed contents could potentially be returned to the consumer with different timestamps.<br>*Possible solution* - Configure the load balancer for "sticky routes", so that the consumer always receives the GTFS-realtime feed contents from the same GTFS-realtime instance. |
 ### FeedEntity
 
 | Field Name | Recommendation |
@@ -57,7 +57,7 @@ Recommended practices are organized into two primary sections
 
 | Field Name | Recommendation |
 | --- | --- |
-| delay | If only `delay` is provided in a `stop_time_update` `arrival` or `departure` (and not `time`), then the GTFS [stop_times.txt](https://gtfs.org/reference/static#stopstxt) must contain arrival_times and/or departure_times for these corresponding stops. A `delay` value in the real-time feed is meaningless unless you have a clock time to add it to in the GTFS `stop_times.txt` file. |
+| delay | If only `delay` is provided in a `stop_time_update` `arrival` or `departure` (and not `time`), then the GTFS [stop_times.txt](https://gtfs.org/reference/static#stopstxt) must contain arrival_times and/or departure_times for these corresponding stops. A `delay` value in the realtime feed is meaningless unless you have a clock time to add it to in the GTFS `stop_times.txt` file. |
 | time | |
 | uncertainty |  |
 ### VehiclePosition
