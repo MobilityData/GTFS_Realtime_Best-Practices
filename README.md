@@ -1,8 +1,8 @@
-# GTFSRT-Best-Practices
+# GTFS_Realtime_Best-Practices
 
 Best Practices for Structuring GTFS Realtime Data
 
-# Editing GTFSRT Best Practices
+# Editing GTFS Realtime Best Practices
 
 The Best Practices data are written in Markdown and is organized by Message and by use case.
 
