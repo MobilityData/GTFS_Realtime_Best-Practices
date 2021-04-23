@@ -8,7 +8,7 @@ General guidelines for alerts and trips:
 | active_period |  | 
 | informed_entity |
 | cause |  |
-| effect | If set to `NO_SERVICE`, any route, trip, or stop referenced in the informed_entity will be canceled or closed and will affect trip planning routing results. |
+| effect | |
 | url |  |
 | header_text |  |
 | description_text |  |
