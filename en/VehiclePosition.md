@@ -2,24 +2,21 @@
 
 Following are the minimal suggested field requirements for a VehiclePostions feed to provide consumers with high-quality data (e.g., for generating predictions)
 
-| Field name | Required? | Description |
-| --- | --- | --- |
-| entity | Yes |  
-| entity_id | Yes | Keep this stable until trip is updated
-| vehicle (position) | Yes | (maps_transit.VehiclePosition)
-| trip | Yes | 
-| trip_id | Yes | Uniquely identifies a trip from the static GTFS
-| start_time | Yes | Required for frequency-based trips (trips defined in GTFS frequencies.txt)
-| start_date | Yes | Required for frequency-based trips (trips defined in GTFS frequencies.txt)
-| schedule_relationship | Yes | SCHEDULED or other appropriate
-| position | Yes |
-| latitude | Yes | 
-| longitude | Yes | 
-| bearing | Optional |
-| speed | Optional | 
-| timestamp | Yes | Epoch timestamp of when the position of the vehicle was obtained in seconds
-| vehicle   (descriptor) | Yes |
-| id | Yes | This must uniquely and stably identify a   vehicle over the entire trip duration
+| Field name | Description |
+| --- | --- |
+| entity.id | This should be kept stable until trip is updated
+| vehicle (VehiclePosition) |
+| vehicle.timestamp |
+| vehicle.trip | 
+| vehicle.trip.trip_id |
+| vehicle.trip.start_time |
+| vehicle.trip.start_date |
+| vehicle.trip.schedule_relationship |
+| vehicle.position | 
+| vehicle.position.latitude |  
+| vehicle.position.longitude |  
+| vehicle.vehicle (VehicleDescriptor) |
+| vehicle.vehicle.id | This should uniquely and stably identify a vehicle over the entire trip duration
 
 Additional recommendations:
 
