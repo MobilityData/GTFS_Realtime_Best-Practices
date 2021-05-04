@@ -1,7 +1,8 @@
 ### TripUpdate
 
-General guidelines for alerts and trips:
+General guidelines for trip cancellations:
 * When canceling trips over a number of days, producers should provide TripUpdates referencing the given `trip_ids` as `CANCELED` as well as an Alert with `NO_SERVICE` referencing the same `trip_ids` that can be shown to riders explaining the cancellation (e.g., detour).
+* If no stops in a trip will be visited, the trip should be `CANCELED` instead of having all `stop_time_updates` being marked as `SKIPPED`.  
 
 | Field Name | Recommendation |
 | --- | --- |
