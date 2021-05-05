@@ -2,7 +2,7 @@
 
 Following are the minimal suggested field requirements for a VehiclePostions feed to provide consumers with high-quality data (e.g., for generating predictions)
 
-| Field name | Description |
+| Field name | Notes |
 | --- | --- |
 | entity.id | Should be kept stable over the entire trip duration
 | vehicle (VehiclePosition) |
