@@ -1,6 +1,6 @@
 # GTFSRT-Best-Practices
 
-Best Practices for Structuring GTFS Realtime. The main document can be found in the [index.md file](./index.md).
+Best Practices for Structuring GTFS-Realtime. The main document can be found in the [index.md file](./index.md).
 
 # Editing GTFSRT Best Practices
 
