@@ -9,7 +9,7 @@ The objectives of maintaining GTFS-Realtime Best Practices are to:
 
 ### How to propose or amend published GTFS-Realtime Best Practices
 
-GTFS applications and practices evolve, and so this document may need to be amended from time to time. To propose an amendment to this document, open a pull request [in the GTFS-Realtime Best Practices GitHub repository](https://github.com/MobilityData/GTFSRT-Best-Practices) and advocate for the change.
+GTFS applications and practices evolve, and so this document may need to be amended from time to time. To propose an amendment to this document, open a pull request [in the GTFS-Realtime Best Practices GitHub repository](https://github.com/MobilityData/GTFS_Realtime_Best-Practices) and advocate for the change.
 
 ### Linking to This Document
 
