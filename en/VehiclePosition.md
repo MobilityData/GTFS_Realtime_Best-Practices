@@ -17,12 +17,3 @@ Following are the minimal suggested field requirements for a VehiclePostions fee
 | vehicle.position.longitude |  
 | vehicle.vehicle (VehicleDescriptor) |
 | vehicle.vehicle.id | This should uniquely and stably identify a vehicle over the entire trip duration
-
-Additional recommendations:
-
-| Field Name | Recommendation |
-| --- | --- |
-| trip | refer to [message TripDescriptor](#TripDescriptor) |
-|  | If separate `VehiclePosition` and `TripUpdate` feeds are provided, [TripDescriptor](#TripDescriptor) and [VehicleDescriptor](#VehicleDescriptor) ID values pairing should match between the two feeds.<br/>For example, a `VehiclePosition` entity has `vehicle_id:A` and `trip_id:4`, then the corresponding `TripUpdate` entity should also have `vehicle_id:A` and `trip_id:4`. |
-| vehicle | refer to [message VehicleDescriptor](#VehicleDescriptor) |
-|  | If separate `VehiclePosition` and `TripUpdate` feeds are provided, [TripDescriptor](#TripDescriptor) and [VehicleDescriptor](#VehicleDescriptor) ID values pairing should match between the two feeds.<br/>For example, a `VehiclePosition` entity has `vehicle_id:A` and `trip_id:4`, then the corresponding `TripUpdate` entity should also have `vehicle_id:A` and `trip_id:4`. |
