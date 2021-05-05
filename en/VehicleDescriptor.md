@@ -4,6 +4,6 @@ If separate `VehiclePosition` and `TripUpdate` feeds are provided, [TripDescript
 
 | Field Name | Recommendation |
 | --- | --- |
-| id |  |
+| id | Should uniquely and stably identify a vehicle over the entire trip duration |
 | label | |
 | license_plate |  |
