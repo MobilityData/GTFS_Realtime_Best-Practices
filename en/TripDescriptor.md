@@ -11,5 +11,5 @@ For example, a `VehiclePosition` entity has `vehicle_id:A` and `trip_id:4`, then
 | direction_id | |
 | start_time | |
 | start_date | |
-| schedule_relationship | |
+| schedule_relationship | The behavior of `ADDED` trips are unspecified and the use of this enumeration is not recommended. |
 
