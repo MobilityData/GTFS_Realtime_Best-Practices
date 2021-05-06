@@ -22,4 +22,5 @@ Recommended practices are organized into two primary sections
 * The web-server hosting GTFS Realtime data should be configured to correctly report the file modification date (see HTTP/1.1 - Request for Comments 2616, under Section 14.29) so consumers can leverage the `If-Modified-Since` HTTP header. This saves producers and consumers bandwidth by avoiding transferring feed contents that haven't changed.
 * Feeds should provide protocol buffer-encoded feed content by default when queried via an HTTP request at the given URL - consumers should not need to define special HTTP accept headers to receive protocol-buffer encoded content.
 * Feeds should use HTTPS instead of HTTP (without encryption) to ensure feed integrity.
+* GTFS Realtime feeds should cover the vast majority of trips included in the companion static GTFS dataset. In particular, it should include data for high-density and high-traffic city areas and busy routes.
    
