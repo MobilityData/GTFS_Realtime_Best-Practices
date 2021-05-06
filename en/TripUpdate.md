@@ -12,5 +12,5 @@ General guidelines for trip cancellations:
 |  | If separate `VehiclePosition` and `TripUpdate` feeds are provided, [TripDescriptor](#TripDescriptor) and [VehicleDescriptor](#VehicleDescriptor) ID values pairing should match between the two feeds.<br/>For example, a `VehiclePosition` entity has `vehicle_id:A` and `trip_id:4`, then the corresponding `TripUpdate` entity should also have `vehicle_id:A` and `trip_id:4`. If any `TripUpdate` entity has `trip_id:4` and any `vehicle_id` other than 4, this is an error. |
 | stop_time_update | `stop_time_updates` for a given `trip_id` should be strictly ordered by increasing `stop_sequence` and no `stop_sequence` should be repeated. |
 |  | All TripUpdates should include at least one `stop_time_update` with a predicted arrival or departure time in the future. If all `stop_time_updates` for a trip reference past arrival and departure times, consumers should assume that no real-time data is available for the trip. |
-| timestamp |  |
+| timestamp | Should reflect the time this prediction for this trip was updated |
 | delay | `TripUpdate.delay` should represent schedule deviation, i.e., the observed past value for how ahead/behind schedule the vehicle is. Predictions for future stops should be provided through `StopTimeEvent.delay` or `StopTimeEvent.time` |
