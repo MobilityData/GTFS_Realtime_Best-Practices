@@ -1,6 +1,6 @@
 # GTFS Realtime-Best-Practices
 
-Best Practices for Structuring GTFS Realtime. The main document can be found in the [index.md file](./index.md).
+Best Practices for Structuring GTFS Realtime.
 
 # Editing GTFS Realtime Best Practices
 
@@ -8,8 +8,6 @@ This document is written in Markdown and is organized by Message and by use case
 
 * `field_name`: The name of the GTFS Realtime field being described
 * `recommendations`: An array of the recommendations provided for each field_name
-
-The parts that constructed the [index.md file](./index.md) can be found in the `en/` directory. To reconstruct the [index.md file](./index.md) from these part, run `./en/combine.sh` from the main directory.
 
 # License
 
