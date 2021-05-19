@@ -1,12 +1,12 @@
-# GTFSRT-Best-Practices
+# GTFS Realtime-Best-Practices
 
-Best Practices for Structuring GTFS Realtime Data
+Best Practices for Structuring GTFS Realtime.
 
-# Editing GTFSRT Best Practices
+# Editing GTFS Realtime Best Practices
 
-The Best Practices data are written in Markdown and is organized by Message and by use case.
+This document is written in Markdown and is organized by Message and by use case.
 
-* `field_name`: The name of the GTFSRT field being described
+* `field_name`: The name of the GTFS Realtime field being described
 * `recommendations`: An array of the recommendations provided for each field_name
 
 # License
