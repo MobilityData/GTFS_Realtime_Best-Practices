@@ -1,6 +1,4 @@
-## Practice Recommendations Organized by Message
-
-### FeedHeader
+# FeedHeader
 
 | Field Name | Recommendation |
 | --- | --- |

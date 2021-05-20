@@ -1,4 +1,4 @@
-### VehiclePosition
+# VehiclePosition
 
 Following are the recommended fields that should be included for a VehiclePostions feed to provide consumers with high-quality data (e.g., for generating predictions)
 

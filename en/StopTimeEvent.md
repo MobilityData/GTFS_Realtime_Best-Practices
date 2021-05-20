@@ -1,4 +1,4 @@
-### StopTimeEvent
+# StopTimeEvent
 
 | Field Name | Recommendation |
 | --- | --- |
