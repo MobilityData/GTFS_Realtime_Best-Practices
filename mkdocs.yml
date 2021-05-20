@@ -1,0 +1,46 @@
+site_name: GTFS Realtime Best Practices
+site_url: http://e-lo.github.io/GTFS_Realtime_Best-Practices
+repo_name: GTFS_Realtime_Best-Practices
+repo_url: https://github.com/e-lo/GTFS_Realtime_Best-Practices
+edit_uri: ""
+
+# change directory names here
+docs_dir: en
+site_dir: site
+
+theme:
+  name: material
+
+  # pretty colors! see https://squidfunk.github.io/mkdocs-material/getting-started/#primary-colors
+  palette:
+    primary: '#301934'
+    accent: 'purple'
+  
+  # fun logos! see https://material.io/icons/
+  icon:
+    logo: material/dns
+
+  font:
+    text: 'Lato'
+    code: 'Roboto Mono'
+
+# give a title for each page
+nav:
+  - 'Introduction': 'index.md'
+  - 'About': 'about.md'
+  - 'Feeds': 
+    - 'FeedEntity': 'FeedEntity.md'
+    - 'FeedHeader': 'FeedHeader.md'
+    - 'VehiclePosition': 'VehiclePosition.md'
+    - 'TripUpdate': 'TripUpdate.md'
+    - 'Alerts': 'Alert.md'
+  - 'Messages': 
+    - 'Position': 'Position.md'
+    - 'StopTimeEvent': 'StopTimeEvent.md'
+    - 'StopTimeUpdate': 'StopeTimeUpdate.md'
+    - 'TripDescriptor': 'TripDescriptor.md'
+    - 'VehicleDescriptor': 'VehicleDescriptor.md'
+  - 'Use-cases': 
+    - 'Frequency-based service': 'Frequency-based.md'
+    
+    
