@@ -37,7 +37,7 @@ nav:
   - 'Messages': 
     - 'Position': 'Position.md'
     - 'StopTimeEvent': 'StopTimeEvent.md'
-    - 'StopTimeUpdate': 'StopeTimeUpdate.md'
+    - 'StopTimeUpdate': 'StopTimeUpdate.md'
     - 'TripDescriptor': 'TripDescriptor.md'
     - 'VehicleDescriptor': 'VehicleDescriptor.md'
   - 'Use-cases': 
