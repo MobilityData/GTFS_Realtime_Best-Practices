@@ -7,10 +7,8 @@ Best Practices for Structuring [GTFS Realtime](https://github.com/google/transit
 
 ## Documentation Structure
 
-The GTFS Realtime Best Practices are written in Markdown and are organized by Message and by use case.
-
-* `field_name`: The name of the GTFS Realtime field being described
-* `recommendations`: An array of the recommendations provided for each field_name
+The GTFS Realtime Best Practices can be viewed at [https://e-lo.github.io/GTFS_Realtime_Best-Practices/](https://e-lo.github.io/GTFS_Realtime_Best-Practices/) or edited 
+ in various [markdown](https://www.markdownguide.org/basic-syntax/)-formatted (`.MD`) text files in this repository. 
 
 ## GTFS Realtime Best Practices Amendment Process
 Anyone may propose a change to the GTFS Realtime Best Practices by following the process below.
