@@ -4,6 +4,8 @@ If separate `VehiclePosition` and `TripUpdate` feeds are provided, [TripDescript
 
 For example, a `VehiclePosition` entity has `vehicle_id:A` and `trip_id:4`, then the corresponding `TripUpdate` entity should also have `vehicle_id:A` and `trip_id:4`.
 
+When `schedule_relationship` is `SCHEDULED`, `route_id`, `trip_id`, and `direction_id` SHOULD match the referenced `route_id`, `trip_id`, and `direction_id` in the GTFS Schedule (static) dataset (feed). 
+
 | Field Name | Recommendation |
 | --- | --- |
 | trip_id | |
