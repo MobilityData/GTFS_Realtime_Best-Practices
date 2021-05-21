@@ -1,8 +1,7 @@
 site_name: GTFS Realtime Best Practices
-site_url: http://e-lo.github.io/GTFS_Realtime_Best-Practices
+site_url: http://MobilityData.github.io/GTFS_Realtime_Best-Practices
 repo_name: GTFS_Realtime_Best-Practices
-repo_url: https://github.com/e-lo/GTFS_Realtime_Best-Practices
-edit_uri: ""
+repo_url: https://github.com/MobilityData/GTFS_Realtime_Best-Practices
 
 # change directory names here
 docs_dir: en
@@ -11,18 +10,18 @@ site_dir: site
 theme:
   name: material
 
-  # pretty colors! see https://squidfunk.github.io/mkdocs-material/getting-started/#primary-colors
-  palette:
-    primary: '#301934'
-    accent: 'purple'
-  
-  # fun logos! see https://material.io/icons/
-  icon:
-    logo: material/dns
+# close to mobilitydata color sorta maybe
+palette:
+  primary: '#301934'
+  accent: 'purple'
 
-  font:
-    text: 'Lato'
-    code: 'Roboto Mono'
+# fun logos! see https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/
+icon:
+  logo: octicons/check-circle-24
+
+font:
+  text: 'Lato'
+  code: 'Roboto Mono'
 
 # give a title for each page
 nav:
