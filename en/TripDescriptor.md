@@ -6,10 +6,5 @@ For example, a `VehiclePosition` entity has `vehicle_id:A` and `trip_id:4`, then
 
 | Field Name | Recommendation |
 | --- | --- |
-| trip_id | |
-| route_id | |
-| direction_id | |
-| start_time | |
-| start_date | |
-| schedule_relationship | The behavior of `ADDED` trips are unspecified and the use of this enumeration is not recommended. |
+| `schedule_relationship` | The behavior of `ADDED` trips are unspecified and the use of this enumeration is not recommended. |
 
