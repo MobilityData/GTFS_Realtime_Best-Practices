@@ -1,5 +1,3 @@
-## Practice Recommendations Organized by Use Case
-
 ### Frequency-based trips
 
 A frequency-based trip does not follow a fixed schedule but attempts to maintain predetermined headways. These trips are denoted in [GTFS frequency.txt](https://gtfs.org/reference/static/#frequenciestxt) by setting `exact_times=0` or omitting the `exact_times` field (note that `exact_times=1` trips are *NOT* frequency-based trips - `frequencies.txt` with `exact_times=1` is simply used as a convenience method for storing schedule-based trips in a more compact manner). There are several best practices to keep in mind when constructing GTFS Realtime feeds for frequency-based trips.

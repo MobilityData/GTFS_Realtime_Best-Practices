@@ -1,4 +1,3 @@
-## Practice Recommendations Organized by Message
 
 ### FeedHeader
 
