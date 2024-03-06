@@ -9,7 +9,9 @@ The objectives of maintaining GTFS Realtime Best Practices are to:
 
 ### How to propose or amend published GTFS Realtime Best Practices
 
-The Best Practices are in the process of being merged into the spec. If you'd like to suggest a new best practice, please go to the [GTFS Reference GitHub repository](https://github.com/google/transit/) to open an issue or create a PR, or contact [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org).
+The Best Practices are in the process of being merged into the spec and some GTFS Best Practices have been merged into the official GTFS Realtime reference and have been removed from this document.
+
+If you'd like to suggest a new best practice, please go to the [GTFS Reference GitHub repository](https://github.com/google/transit/) to open an issue or create a PR, or contact [specifications@mobilitydata.org](mailto:specifications@mobilitydata.org).
 
 ### Linking to This Document
 
