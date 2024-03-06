@@ -2,7 +2,7 @@
 
 ## Introduction
 
-These are recommended practices for describing real-time public transportation information in the [GTFS Realtime](https://gtfs.org/reference/realtime/v2/) data format. These complement the explicit recommendations outlined in the GTFS Schedule Reference using the terms “recommend” or “should”. Although not mandatory, following these best practices can significantly improve the quality of the data and the overall experience for riders.
+These are recommended practices for describing real-time public transportation information in the [GTFS Realtime Reference](https://gtfs.org/realtime/reference/) format. These complement the explicit recommendations outlined in the GTFS Realtime Reference using the terms “recommend” or “should”. Although not mandatory, following these best practices can significantly improve the quality of the data and the overall experience for riders.
 
 These practices have been synthesized from the experience of the [GTFS Best Practices working group](https://gtfs.org/schedule/best-practices/#gtfs-best-practices-working-group) members and [application-specific GTFS practice recommendations](http://www.transitwiki.org/TransitWiki/index.php/Best_practices_for_creating_GTFS). 
 
